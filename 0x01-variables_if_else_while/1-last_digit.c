@@ -1,17 +1,16 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 #include <stdio.h>
 
 /**
- * main - Prints a text according number
- * Return: Always (Success)
- *
+ * main - prints the last digit of a randomly operated number 
+ * and whether it is greater that 5, less that 6, or 0
+ * 
+ * Return: Always 0.
  */
-
 int main(void)
-
 {
-	int n, lastd;
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -27,7 +26,7 @@ int main(void)
 	}
 	else if (lastd < 6 && lastd != 0)
 	{
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastd);
+	printf("Last digit of %d is %d and is less than 6 and not  0\n", n, lastd);
 	}
 	return (0);
 }
