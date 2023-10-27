@@ -22,14 +22,14 @@ unsigned int binary_to_uint(const char *b)
 	for (len = 0; b[len] != '\0'; len++)
 		;
 	if (len == 1 && (b[0] == '0' || b[0] == '1'))
-		return (b[0] - 48);
+			return (b[0] - 48);
 	for (j = 0; b[j] != '\0'; j++)
 	{
 		if (b[j] != '0' && b[j] != '1')
-			return (0);
+		return (0);
 		for (k = len - 1; k > 0; k--)
 		pow = pow * base;
-		sum = sum * (pow * (b[j] - 48));
+		sum = sum + (pow * (b[j] - 48));
 		len--;
 		pow = 1;
 	}
