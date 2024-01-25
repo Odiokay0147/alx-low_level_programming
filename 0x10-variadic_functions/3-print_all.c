@@ -12,7 +12,6 @@ void print_all(const char * const format, ...)
 	va_list dis;
 
 	va_start(dis, format);
-
 	x = 0;
 	while (format != NULL && format[x] != '\0')
 	{
@@ -35,6 +34,7 @@ void print_all(const char * const format, ...)
 				if (str == NULL)
 					str = "(nil)";
 				printf("%s", str);
+				y = 0;
 				break;
 			default:
 				y = 1;
